@@ -1,6 +1,6 @@
 export function getTasksAPI() {
     return fetch('http://localhost:4000/tasks')
-    .then(res => res.json)
+    .then(res => res.json())
     .then(data => data)
 }
 

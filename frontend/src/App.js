@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './App.css';
 import {getTasksAPI, addTaskAPI, updateTaskAPI, deleteTaskAPI} from './apis/tasks';
+import TableTask from './TableTask';
 
 function App() {
   const [tasks, setTasks] = useState([]);
