@@ -12,7 +12,7 @@ function TableTask(props){
             {
                 tasks.map(task => {
                     return(
-                        <tr key={book._id}>
+                        <tr key={task._id}>
                             <td>{task.title}</td>
                             <td>{task.description}</td>
                         </tr>
