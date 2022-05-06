@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.App-Table {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+}
+
+.App-Input {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid black !important;
+  margin: 0.5rem
+}
+
+.App-Submit {
+  background: #db4035;
+  color: darken(#db4035, 45);
+  border: none;
+  padding: .5rem 2rem;
+  height: 2.5rem;
+}

@@ -3,6 +3,7 @@ import './App.css';
 import {getTasksAPI, addTaskAPI, updateTaskAPI, deleteTaskAPI} from './apis/tasks';
 import TableTask from './TableTask';
 import CreateTask from './CreateTask';
+import Heading from './Heading';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -35,8 +36,9 @@ function App() {
 
   return (
     <div className="App">
+      <Heading />
       <CreateTask onCreate={addTask} />
-      <TableTask tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} />
+      <TableTask className="App" tasks={tasks} onDelete={deleteTask} onUpdate={updateTask} />
     </div>
   );
 }

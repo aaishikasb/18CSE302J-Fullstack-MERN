@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
+import './App.css';
 
 function TableTask(props){
     const {tasks, onDelete, onUpdate} = props;
 
     return(
-        <table>
+        <table className='App-Table'>
             <tr>
-                <td>Title</td>
-                <td>Description</td>
+                <td><b>Title</b></td>
+                <td><b>Description</b></td>
+                <td><b>Action Items</b></td>
             </tr>
             {
                 tasks.map(task => {
@@ -15,7 +17,7 @@ function TableTask(props){
                         <tr key={task._id}>
                             <td>{task.title}</td>
                             <DescriptionForm task={task} onUpdate={onUpdate} />
-                            <td><button onClick={() => onDelete(task._id)}>Delete</button></td>
+                            <td><button className='App-Submit' onClick={() => onDelete(task._id)}>Delete</button></td>
                         </tr>
                     )
                 })
@@ -36,10 +38,10 @@ function DescriptionForm(props){
     return(
         <div>
             <td>
-                <input type="text" value={description} onChange={(event) => handleChange(event)} />
+                <input className='App-Input' type="text" value={description} onChange={(event) => handleChange(event)} />
             </td>
             <td>
-                <button onClick={onUpdate({_id: task._id, description: description})}>Update</button>
+                <button className='App-Submit' onClick={onUpdate({_id: task._id, description: description})}>Update</button>
             </td>
         </div>
     )
